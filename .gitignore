@@ -1,0 +1,17 @@
+# Sensitive personal documents — never deploy these
+proton-recovery-kit.pdf
+Bachelors_Certificate.pdf
+Master's_degree_certificate.pdf
+
+# Internal planning docs
+DEPLOY_PROGRESS.md
+
+# Claude Code memory / session files (not part of the website)
+.claude/
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo

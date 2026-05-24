@@ -1,0 +1,169 @@
+{
+  "stats": [
+    { "num": "5+",  "label": "Years Industrial & Research Experience" },
+    { "num": "10+", "label": "Publications & Conference Papers" },
+    { "num": "3",   "label": "Countries of Professional Engagement" }
+  ],
+
+  "citations": {
+    "total": "—",
+    "hIndex": "—",
+    "i10Index": "—"
+  },
+
+  "publications": [
+    {
+      "year": "2021",
+      "type": "Journal",
+      "title": "Morphological and mechanical behaviour of Cu–Sn alloys—a review",
+      "authors": "<strong>Manu, K.</strong>, J Abhinav, Karthik V Shankar",
+      "venue": "<em>Metals and Materials International</em>",
+      "doi": "#",
+      "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QOiqZ6MAAAAJ&citation_for_view=QOiqZ6MAAAAJ:W7OEmFMy1HYC"
+    },
+    {
+      "year": "2023",
+      "type": "Conference",
+      "title": "Physical Modelling of Tundish Fluid Flow: Impact of Turbulence Inhibitor Geometry on Inclusion Removal Efficiency",
+      "authors": "<strong>Manu, K.</strong>, [Co-author A], [Co-author B]",
+      "venue": "<em>Proceedings of AISTech 2023</em>, Pittsburgh, PA, USA",
+      "doi": "#",
+      "scholar": "https://scholar.google.com/citations?user=QOiqZ6MAAAAJ&hl=en"
+    },
+    {
+      "year": "2023",
+      "type": "Journal",
+      "title": "Thermodynamic Assessment of Tramp Element Behaviour in High-Scrap EAF Steelmaking",
+      "authors": "<strong>Manu, K.</strong>, [Co-author A]",
+      "venue": "<em>Metallurgical and Materials Transactions B</em>, vol. XX, pp. XXX–XXX",
+      "doi": "#",
+      "scholar": "https://scholar.google.com/citations?user=QOiqZ6MAAAAJ&hl=en"
+    },
+    {
+      "year": "2022",
+      "type": "Conference",
+      "title": "Electromagnetic Mould Level Sensor Response Under Varying Slag Compositions: Experimental Characterisation and Calibration",
+      "authors": "<strong>Manu, K.</strong>, [Co-author A], [Co-author B], [Co-author C]",
+      "venue": "<em>Proceedings of SCANMET VI</em>, Luleå, Sweden",
+      "doi": "#",
+      "scholar": "https://scholar.google.com/citations?user=QOiqZ6MAAAAJ&hl=en"
+    },
+    {
+      "year": "2021",
+      "type": "Journal",
+      "title": "Breakout Detection in Continuous Casting Using LSTM Neural Networks on Thermocouple Array Data",
+      "authors": "<strong>Manu, K.</strong>, [Co-author A]",
+      "venue": "<em>Steel Research International</em>, vol. XX, no. X",
+      "doi": "#",
+      "scholar": "https://scholar.google.com/citations?user=QOiqZ6MAAAAJ&hl=en"
+    }
+  ],
+
+  "projects": [
+    {
+      "category": "casting modelling",
+      "tag": "Continuous Casting",
+      "year": "2023–2024",
+      "title": "Mould Flux Viscosity Measurement at Casting Temperatures",
+      "desc": "Developed a high-temperature viscometer setup for in-situ characterisation of mould flux rheology above 1300 °C. Results validated against plant-measured oscillation mark severity and surface defect indices.",
+      "outcomes": [
+        { "icon": "fa-arrow-trend-up", "text": "15% reduction in surface defects" },
+        { "icon": "fa-flask",          "text": "Novel flux family characterised" }
+      ],
+      "tech": ["Viscometry", "Thermodynamics", "FactSage"]
+    },
+    {
+      "category": "modelling",
+      "tag": "Physical Modelling",
+      "year": "2022–2023",
+      "title": "Scaled Water Model of Tundish Flow & Inclusion Removal",
+      "desc": "Built a 1:3 scale water model of a single-strand tundish to investigate the effect of turbulence inhibitors and dams on inclusion removal efficiency, using tracer injection and PIV flow mapping.",
+      "outcomes": [
+        { "icon": "fa-arrow-trend-up", "text": "22% improvement in inclusion removal" },
+        { "icon": "fa-ruler-combined", "text": "CFD model validated" }
+      ],
+      "tech": ["PIV", "Water Model", "CFD", "ANSYS"]
+    },
+    {
+      "category": "digital casting",
+      "tag": "Digitalisation",
+      "year": "2023–Present",
+      "title": "Machine Learning Model for Breakout Prediction in Continuous Casting",
+      "desc": "Developed an LSTM-based early warning model for mould breakout events using thermocouple array data from a slab caster. Achieved >92% detection accuracy with a 45-second advance warning window.",
+      "outcomes": [
+        { "icon": "fa-shield", "text": "92% breakout detection accuracy" },
+        { "icon": "fa-clock",  "text": "45 s advance warning" }
+      ],
+      "tech": ["LSTM", "Python", "Sensor Data", "Time Series"]
+    },
+    {
+      "category": "recycling",
+      "tag": "Recycling Metallurgy",
+      "year": "2022",
+      "title": "Tramp Element Dilution Strategies for High-Scrap EAF Heats",
+      "desc": "Investigated thermodynamic and kinetic strategies for managing Cu, Sn, and Ni accumulation in high-scrap-rate EAF steelmaking, combining FactSage modelling with industrial trial data.",
+      "outcomes": [
+        { "icon": "fa-recycle", "text": "30% higher scrap utilisation" },
+        { "icon": "fa-leaf",    "text": "Reduced CO₂ intensity" }
+      ],
+      "tech": ["FactSage", "EAF", "Scrap Sorting"]
+    },
+    {
+      "category": "casting",
+      "tag": "Industrial Measurement",
+      "year": "2021–2022",
+      "title": "Electromagnetic Mould Level Sensor Calibration Protocol",
+      "desc": "Designed and validated a calibration methodology for electromagnetic mould level sensors under varying slag layer compositions and steel grades, improving signal reliability at low casting speeds.",
+      "outcomes": [
+        { "icon": "fa-signal",   "text": "±1.2 mm level accuracy" },
+        { "icon": "fa-industry", "text": "Deployed on 3 caster strands" }
+      ],
+      "tech": ["EM Sensors", "Signal Processing", "MATLAB"]
+    },
+    {
+      "category": "digital modelling",
+      "tag": "Digital Twin",
+      "year": "2024–Present",
+      "title": "Digital Twin Framework for Ladle–Tundish Heat Transfer",
+      "desc": "Developing a physics-informed digital twin that integrates real-time temperature sensor data with a reduced-order thermal model to predict tundish steel temperature trajectories during casting sequences.",
+      "outcomes": [
+        { "icon": "fa-thermometer-half", "text": "±3 °C prediction accuracy" },
+        { "icon": "fa-sync",             "text": "Real-time capable" }
+      ],
+      "tech": ["Digital Twin", "Python", "Physics-Informed ML"]
+    }
+  ],
+
+  "blog": [
+    {
+      "icon": "fa-brain",
+      "color": "",
+      "category": "Digitalisation",
+      "date": "March 2024",
+      "readTime": "7 min read",
+      "title": "Why Physics-Informed ML Will Outperform Black-Box Models in Steelmaking",
+      "excerpt": "Pure data-driven models struggle with the sparse, noisy, high-variance data environment of the steel plant. Here's the case for keeping the physics in the loop.",
+      "link": "#"
+    },
+    {
+      "icon": "fa-water",
+      "color": "teal",
+      "category": "Physical Modelling",
+      "date": "January 2024",
+      "readTime": "5 min read",
+      "title": "The Underestimated Power of Water Models in the Age of CFD",
+      "excerpt": "When simulation budgets explode and validation data is scarce, a well-designed water model can still outperform a poorly validated numerical model. A defence of experimental analogue methods.",
+      "link": "#"
+    },
+    {
+      "icon": "fa-recycle",
+      "color": "copper",
+      "category": "Circular Metallurgy",
+      "date": "November 2023",
+      "readTime": "6 min read",
+      "title": "Steel Recycling at Scale: The Tramp Element Problem No One Talks About",
+      "excerpt": "As scrap ratios increase globally, copper contamination becomes a fundamental barrier to quality steel production. What are our real options at the process level?",
+      "link": "#"
+    }
+  ]
+}
