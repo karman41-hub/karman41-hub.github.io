@@ -1,0 +1,76 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# update-slides.yml
+# Triggered whenever live_ppt.pptx is pushed to main.
+# Converts each slide to a JPEG, writes assets/slides/, updates data.json,
+# then commits back so GitHub Pages picks up the new images automatically.
+# ─────────────────────────────────────────────────────────────────────────────
+name: Update Slides from PPT
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'live_ppt.pptx'
+
+permissions:
+  contents: write
+
+jobs:
+  convert-slides:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install tools (LibreOffice + Poppler)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libreoffice poppler-utils imagemagick
+
+      # LibreOffice converts PPTX → PDF first (best fidelity)
+      - name: Convert PPTX → PDF
+        run: |
+          libreoffice --headless --convert-to pdf live_ppt.pptx --outdir /tmp/
+
+      # pdftoppm renders each page to a high-res JPEG
+      - name: Convert PDF → JPEG slides
+        run: |
+          mkdir -p assets/slides
+          rm -f assets/slides/slide-*.jpg
+          pdftoppm -jpeg -r 180 /tmp/live_ppt.pdf /tmp/slide
+          # Rename to slide-1.jpg, slide-2.jpg … (zero-padding varies with count)
+          i=1
+          for f in $(ls /tmp/slide-*.jpg /tmp/slide-0*.jpg 2>/dev/null | sort -V); do
+            cp "$f" "assets/slides/slide-${i}.jpg"
+            i=$((i+1))
+          done
+          echo "Exported $((i-1)) slides to assets/slides/"
+
+      - name: Update data.json with slide list
+        run: |
+          python3 - <<'PYEOF'
+          import json, glob
+
+          with open('data.json', 'r', encoding='utf-8') as f:
+              data = json.load(f)
+
+          slides = sorted(glob.glob('assets/slides/slide-*.jpg'),
+                          key=lambda p: int(p.split('-')[-1].split('.')[0]))
+          data['slides'] = [{'src': s} for s in slides]
+
+          with open('data.json', 'w', encoding='utf-8') as f:
+              json.dump(data, f, indent=2, ensure_ascii=False)
+
+          print(f"data.json updated — {len(slides)} slides")
+          PYEOF
+
+      - name: Commit generated assets
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/slides/ data.json
+          # Only commit if something actually changed
+          git diff --staged --quiet && echo "No changes" || \
+            git commit -m "chore: auto-update slides from live_ppt.pptx [skip ci]"
+          git push

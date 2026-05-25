@@ -116,7 +116,93 @@ let _revealObserver = null;
       </article>`).join('');
     observeNew(blogGrid);
   }
+  /* Slideshow */
+  initSlideshow(d.slides || []);
 })();
+
+/* ── SLIDESHOW ──────────────────────────────────────────────── */
+function initSlideshow(slides) {
+  const container = document.getElementById('slideshowContainer');
+  if (!container) return;
+
+  const wrapper  = container.querySelector('#slidesWrapper');
+  const dotsEl   = container.querySelector('#slideDots');
+  const prevBtn  = container.querySelector('#slidePrev');
+  const nextBtn  = container.querySelector('#slideNext');
+  const progFill = container.querySelector('.slideshow-progress-fill');
+
+  if (!slides.length) {
+    wrapper.innerHTML = `
+      <div class="slide-item active">
+        <div class="slide-placeholder">
+          <i class="fas fa-images" aria-hidden="true"></i>
+          <p>Export your PPT slides as images (File → Export → JPEG)<br>and place them in the <code>assets/slides/</code> folder.</p>
+          <p>Then add them to <code>data.json</code> under the <code>"slides"</code> key.</p>
+        </div>
+      </div>`;
+    if (prevBtn) prevBtn.style.display = 'none';
+    if (nextBtn) nextBtn.style.display = 'none';
+    return;
+  }
+
+  let current = 0;
+  let timer   = null;
+  const INTERVAL = 5000; /* ms per slide */
+
+  /* Build slides */
+  wrapper.innerHTML = slides.map((s, i) => `
+    <div class="slide-item${i === 0 ? ' active' : ''}" data-index="${i}">
+      <img src="${s.src}" alt="${s.alt || 'Slide ' + (i + 1)}" loading="${i === 0 ? 'eager' : 'lazy'}" />
+    </div>`).join('');
+
+  /* Build dots */
+  dotsEl.innerHTML = slides.map((_, i) => `
+    <button class="slide-dot${i === 0 ? ' active' : ''}" data-dot="${i}" aria-label="Go to slide ${i + 1}"></button>`).join('');
+
+  function goTo(idx) {
+    const items = wrapper.querySelectorAll('.slide-item');
+    const dots  = dotsEl.querySelectorAll('.slide-dot');
+    items[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (idx + slides.length) % slides.length;
+    items[current].classList.add('active');
+    dots[current].classList.add('active');
+    restartTimer();
+  }
+
+  function restartTimer() {
+    if (progFill) {
+      progFill.style.transition = 'none';
+      progFill.style.width = '0%';
+      /* force reflow */
+      progFill.offsetWidth; // eslint-disable-line no-unused-expressions
+      progFill.style.transition = `width ${INTERVAL}ms linear`;
+      progFill.style.width = '100%';
+    }
+    clearInterval(timer);
+    timer = setInterval(() => goTo(current + 1), INTERVAL);
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+  dotsEl.addEventListener('click', e => {
+    const dot = e.target.closest('.slide-dot');
+    if (dot) goTo(+dot.dataset.dot);
+  });
+
+  /* Pause on hover */
+  container.addEventListener('mouseenter', () => clearInterval(timer));
+  container.addEventListener('mouseleave', restartTimer);
+
+  /* Keyboard */
+  container.setAttribute('tabindex', '0');
+  container.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft')  goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
+  });
+
+  restartTimer();
+}
 
 function setText(id, val) {
   const el = document.getElementById(id);
@@ -138,7 +224,7 @@ function observeNew(container) {
 
   document.addEventListener('mousemove', e => {
     spotlight.style.background =
-      `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(100,255,218,0.05), transparent 40%)`;
+      `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(192,57,43,0.04), transparent 40%)`;
   }, { passive: true });
 })();
 
@@ -305,7 +391,7 @@ function initProjectFilter() {
     } catch {
       btn.disabled = false;
       btn.innerHTML = '<i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message';
-      showError('fmessage', 'messageError', 'Send failed — email karthikm4148@gmail.com directly.');
+      showError('fmessage', 'messageError', 'Send failed — email karthikm4159@gmail.com directly.');
     }
   });
 })();

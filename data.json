@@ -1,6 +1,6 @@
 {
   "stats": [
-    { "num": "6+",  "label": "Years Research & Industrial Experience" },
+    { "num": "4+",  "label": "Years Research & Industrial Experience" },
     { "num": "13",  "label": "Publications & Conference Contributions" },
     { "num": "163", "label": "Total Citations (Google Scholar)" }
   ],
@@ -210,6 +210,11 @@
       ],
       "tech": ["Solution Heat Treatment", "SEM / EDS", "Hardness Testing", "Alloy Design"]
     }
+  ],
+
+  "slides": [
+    { "src": "assets/slides/slide-1.jpg", "alt": "Research Interests" },
+    { "src": "assets/slides/slide-2.jpg", "alt": "Selected Work" }
   ],
 
   "blog": [
