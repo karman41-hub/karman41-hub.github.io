@@ -239,7 +239,7 @@ ul { list-style: none; }
 .hamburger span {
   display: block;
   width: 22px; height: 2px;
-  background: var(--lightest-slate);
+  background: var(--lightest-slate); /* #111 — visible on light bg */
   border-radius: 2px;
   transition: transform 0.25s var(--ease), opacity 0.25s;
 }
@@ -300,9 +300,10 @@ ul { list-style: none; }
   font-size: 0.88rem;
   color: var(--slate);
   line-height: 1.75;
-  max-width: 540px;
+  max-width: none;
   margin-top: -1.5rem;
   margin-bottom: 2.5rem;
+  text-wrap: pretty;
 }
 
 /* ── 8. BUTTONS ─────────────────────────────────────────────── */
@@ -952,8 +953,9 @@ ul { list-style: none; }
   font-size: 0.9rem;
   color: var(--slate);
   line-height: 1.8;
-  max-width: 520px;
+  max-width: none;
   margin-bottom: 2.5rem;
+  text-wrap: pretty;
 }
 
 .contact-grid {
@@ -1175,7 +1177,7 @@ ul { list-style: none; }
     height: auto;
     padding: 0 1.5rem;
     z-index: 100;
-    background: rgba(10, 25, 47, 0.96);
+    background: rgba(253, 245, 245, 0.97);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--lightest-navy);
@@ -1214,7 +1216,7 @@ ul { list-style: none; }
     position: fixed;
     top: 72px;
     left: 0; right: 0;
-    background: rgba(17, 34, 64, 0.98);
+    background: rgba(253, 245, 245, 0.99);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--lightest-navy);
@@ -1231,7 +1233,7 @@ ul { list-style: none; }
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--light-slate);
+    color: var(--lightest-slate);
     border-bottom: 1px solid var(--lightest-navy);
     transition: color var(--dur);
   }

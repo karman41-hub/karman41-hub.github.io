@@ -224,7 +224,21 @@ function observeNew(container) {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (window.matchMedia('(hover: none)').matches) return; /* skip on touch devices */
 
+  let suppressed = false;
+
+  /* Suppress spotlight over interactive charts / media */
+  document.querySelectorAll('.pub-bubble-wrap, .slideshow-container').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      suppressed = true;
+      spotlight.style.background = 'none';
+    }, { passive: true });
+    el.addEventListener('mouseleave', () => {
+      suppressed = false;
+    }, { passive: true });
+  });
+
   document.addEventListener('mousemove', e => {
+    if (suppressed) return;
     spotlight.style.background =
       `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(192,57,43,0.16), transparent 40%)`;
   }, { passive: true });
@@ -382,10 +396,19 @@ function initProjectFilter() {
     btn.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Sending…';
 
     try {
-      const res = await fetch('https://formspree.io/f/xjgjzlgq', {
+      const payload = {
+        name:    data.name,
+        email:   data.email,
+        subject: data.subject || 'Website Contact',
+        message: data.message,
+        _subject: `[karman41-hub.github.io] ${data.subject || 'New message'} — from ${data.name}`,
+        _captcha: 'false',
+        _template: 'table',
+      };
+      const res = await fetch('https://formsubmit.co/ajax/karthikm4159@gmail.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error('Network error');
       form.style.display = 'none';
