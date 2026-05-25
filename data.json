@@ -1,16 +1,23 @@
 {
   "stats": [
-    { "num": "4+",  "label": "Years Research & Industrial Experience" },
-    { "num": "13",  "label": "Publications & Conference Contributions" },
-    { "num": "163", "label": "Total Citations (Google Scholar)" }
+    {
+      "num": "4+",
+      "label": "Years Research & Industrial Experience"
+    },
+    {
+      "num": "13",
+      "label": "Publications & Conference Contributions"
+    },
+    {
+      "num": "163",
+      "label": "Total Citations (Google Scholar)"
+    }
   ],
-
   "citations": {
     "total": "163",
     "hIndex": "5",
     "i10Index": "3"
   },
-
   "publications": [
     {
       "year": "2026",
@@ -136,7 +143,6 @@
       "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
     }
   ],
-
   "projects": [
     {
       "category": "recycling",
@@ -145,10 +151,21 @@
       "title": "Iron Ore Pellet Fines Recycling with Innovative Organic Binders",
       "desc": "Developed and characterised novel organic binder systems to maximise the reuse of iron ore pellet fines — typically landfilled waste — back into the iron ore pelletisation process. Work conducted at Swerim AB, Luleå.",
       "outcomes": [
-        { "icon": "fa-file-alt",    "text": "Published in <em>Materials</em>, MDPI 2023" },
-        { "icon": "fa-quote-right", "text": "11 citations and growing" }
+        {
+          "icon": "fa-file-alt",
+          "text": "Published in <em>Materials</em>, MDPI 2023"
+        },
+        {
+          "icon": "fa-quote-right",
+          "text": "11 citations and growing"
+        }
       ],
-      "tech": ["Organic Binders", "Pelletisation", "Compression Testing", "Sustainability"]
+      "tech": [
+        "Organic Binders",
+        "Pelletisation",
+        "Compression Testing",
+        "Sustainability"
+      ]
     },
     {
       "category": "recycling casting",
@@ -157,10 +174,22 @@
       "title": "Biocarbon-Chromite Briquettes for Ferrochrome Production — Bio4SAF",
       "desc": "Developed extrusion-based biocarbon-chromite briquettes to partially replace fossil-based reductants in submerged arc furnace (SAF) ferrochrome production. Part of the Swerim Bio4SAF initiative targeting lower CO₂ emissions in ferroalloy production.",
       "outcomes": [
-        { "icon": "fa-microphone", "text": "Presented at TMS 2026, Las Vegas" },
-        { "icon": "fa-leaf",       "text": "Swerim Bio4SAF project deliverable" }
+        {
+          "icon": "fa-microphone",
+          "text": "Presented at TMS 2026, Las Vegas"
+        },
+        {
+          "icon": "fa-leaf",
+          "text": "Swerim Bio4SAF project deliverable"
+        }
       ],
-      "tech": ["Biocarbon", "Extrusion", "SAF", "Ferrochrome", "Circular Economy"]
+      "tech": [
+        "Biocarbon",
+        "Extrusion",
+        "SAF",
+        "Ferrochrome",
+        "Circular Economy"
+      ]
     },
     {
       "category": "casting modelling",
@@ -169,10 +198,21 @@
       "title": "Nozzle Design & Metal Flow Stability in Continuous Casting",
       "desc": "Investigated the influence of submerged entry nozzle (SEN) geometry on metal flow patterns and flow stability in the continuous casting mould. Combined physical and numerical modelling approaches to develop optimised nozzle configurations.",
       "outcomes": [
-        { "icon": "fa-microphone",    "text": "Presented at 34th Int'l Metallurgy Conference 2025" },
-        { "icon": "fa-ruler-combined","text": "Improved flow uniformity through nozzle optimisation" }
+        {
+          "icon": "fa-microphone",
+          "text": "Presented at 34th Int'l Metallurgy Conference 2025"
+        },
+        {
+          "icon": "fa-ruler-combined",
+          "text": "Improved flow uniformity through nozzle optimisation"
+        }
       ],
-      "tech": ["CFD", "Physical Modelling", "SEN Geometry", "Continuous Casting"]
+      "tech": [
+        "CFD",
+        "Physical Modelling",
+        "SEN Geometry",
+        "Continuous Casting"
+      ]
     },
     {
       "category": "recycling",
@@ -181,10 +221,21 @@
       "title": "Lignin-Based Agglomerates for Next-Generation Steelmaking",
       "desc": "Developing bio-based agglomerate systems using lignin as a sustainable binder for steel and ferroalloy production, targeting replacement of conventional fossil-derived binders. Collaborative research at Swerim AB with industry partners.",
       "outcomes": [
-        { "icon": "fa-leaf",    "text": "Novel bio-based binder system developed" },
-        { "icon": "fa-sync",   "text": "Ongoing Swerim research programme" }
+        {
+          "icon": "fa-leaf",
+          "text": "Novel bio-based binder system developed"
+        },
+        {
+          "icon": "fa-sync",
+          "text": "Ongoing Swerim research programme"
+        }
       ],
-      "tech": ["Lignin", "Agglomeration", "Bio-Based Materials", "Steelmaking"]
+      "tech": [
+        "Lignin",
+        "Agglomeration",
+        "Bio-Based Materials",
+        "Steelmaking"
+      ]
     },
     {
       "category": "modelling",
@@ -193,10 +244,21 @@
       "title": "Copper-Tin Alloy Characterisation — Comprehensive Review Studies",
       "desc": "Conducted extensive literature reviews and experimental characterisation of Cu-Sn and Ti-Cu-Sn alloy systems, covering morphological, mechanical, and thermophysical properties. Results published as two widely cited review articles.",
       "outcomes": [
-        { "icon": "fa-quote-right", "text": "93 citations — <em>Metals &amp; Materials International</em>, Springer 2021" },
-        { "icon": "fa-quote-right", "text": "41 citations — <em>Materials</em>, MDPI 2021" }
+        {
+          "icon": "fa-quote-right",
+          "text": "93 citations — <em>Metals &amp; Materials International</em>, Springer 2021"
+        },
+        {
+          "icon": "fa-quote-right",
+          "text": "41 citations — <em>Materials</em>, MDPI 2021"
+        }
       ],
-      "tech": ["Cu-Sn Alloys", "Ti Addition", "Casting Metallurgy", "Mechanical Testing"]
+      "tech": [
+        "Cu-Sn Alloys",
+        "Ti Addition",
+        "Casting Metallurgy",
+        "Mechanical Testing"
+      ]
     },
     {
       "category": "modelling",
@@ -205,18 +267,31 @@
       "title": "Al–Si–Mg–Ni Hypoeutectic Alloy Heat Treatment Optimisation",
       "desc": "Studied the effect of solutionising temperature and time on the dendrite morphology and mechanical behaviour of Al-Si-Mg-Ni hypoeutectic alloys. Characterised microstructural evolution using SEM/EDS and correlated with tensile and hardness outcomes.",
       "outcomes": [
-        { "icon": "fa-file-alt",    "text": "Two peer-reviewed publications (Springer, 2021–2022)" },
-        { "icon": "fa-award",       "text": "14 combined citations" }
+        {
+          "icon": "fa-file-alt",
+          "text": "Two peer-reviewed publications (Springer, 2021–2022)"
+        },
+        {
+          "icon": "fa-award",
+          "text": "14 combined citations"
+        }
       ],
-      "tech": ["Solution Heat Treatment", "SEM / EDS", "Hardness Testing", "Alloy Design"]
+      "tech": [
+        "Solution Heat Treatment",
+        "SEM / EDS",
+        "Hardness Testing",
+        "Alloy Design"
+      ]
     }
   ],
-
   "slides": [
-    { "src": "assets/slides/slide-1.jpg", "alt": "Research Interests" },
-    { "src": "assets/slides/slide-2.jpg", "alt": "Selected Work" }
+    {
+      "src": "assets/slides/slide-1.jpg"
+    },
+    {
+      "src": "assets/slides/slide-2.jpg"
+    }
   ],
-
   "blog": [
     {
       "icon": "fa-brain",
