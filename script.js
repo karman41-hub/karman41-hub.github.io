@@ -226,7 +226,7 @@ function observeNew(container) {
 
   document.addEventListener('mousemove', e => {
     spotlight.style.background =
-      `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(192,57,43,0.10), transparent 40%)`;
+      `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(192,57,43,0.16), transparent 40%)`;
   }, { passive: true });
 })();
 

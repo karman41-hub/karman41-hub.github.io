@@ -833,6 +833,7 @@ ul { list-style: none; }
 .pub-stats {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 1.5rem;
@@ -841,6 +842,7 @@ ul { list-style: none; }
   border-radius: 6px;
   border: 1px solid var(--lightest-navy);
   font-size: 0.8rem;
+  text-align: center;
 }
 .pub-stats strong { color: var(--lightest-slate); }
 .divider { color: var(--lightest-navy); }
