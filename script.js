@@ -457,7 +457,7 @@ function renderBubbleChart(publications) {
   /* ── Data ──────────────────────────────────────────────────── */
   const pubs   = publications.filter(p => p.year && !isNaN(+p.year));
   const allYrs = pubs.map(p => +p.year);
-  const minYr  = Math.min(...allYrs);
+  const minYr  = 2020;   /* fixed – x-axis always starts at 2020 */
   const maxYr  = Math.max(...allYrs);
   const ySpan  = maxYr === minYr ? 1 : maxYr - minYr;
   const YCEILING = 100;   /* y-axis top label */
