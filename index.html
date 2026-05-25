@@ -279,8 +279,22 @@
           </a>
         </div>
 
-        <!-- Populated from data.json -->
-        <div class="publications-list" id="publicationsList"></div>
+        <!-- Citation Bubble Timeline -->
+        <p class="bc-hint reveal">
+          <i class="fas fa-circle-info" aria-hidden="true"></i>
+          Bubble size reflects citation count &nbsp;·&nbsp; Hover to explore &nbsp;·&nbsp; Click to open paper
+        </p>
+        <div class="pub-bubble-wrap reveal" id="pubBubble" aria-label="Citation timeline chart"></div>
+
+        <!-- Full list — collapsible -->
+        <details class="pub-list-details">
+          <summary class="pub-list-summary">
+            <i class="fas fa-list" aria-hidden="true"></i>
+            Full publication list
+            <i class="fas fa-chevron-right pub-chevron" aria-hidden="true"></i>
+          </summary>
+          <div class="publications-list" id="publicationsList"></div>
+        </details>
 
         <div class="pub-stats reveal">
           <span class="mono">Citations: <strong id="citationCount">—</strong></span>
