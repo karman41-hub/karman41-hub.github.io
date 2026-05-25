@@ -49,6 +49,7 @@ let _revealObserver = null;
         <div class="pub-main">
           <div class="pub-meta-row">
             <span class="pub-type-badge ${p.type.toLowerCase()}">${p.type}</span>
+            ${p.citedBy ? `<span class="pub-cited" title="Citations on Google Scholar"><i class="fas fa-quote-right" aria-hidden="true"></i> ${p.citedBy}</span>` : ''}
           </div>
           <h3 class="pub-title">${p.title}</h3>
           <p class="pub-authors">${p.authors}</p>
