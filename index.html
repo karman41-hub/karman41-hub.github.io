@@ -418,12 +418,15 @@
         <div class="location-wrap reveal">
           <div class="location-map-col">
 
-            <svg class="sweden-map" viewBox="15 25 230 495"
+            <svg class="sweden-map" viewBox="0 20 300 505"
                  xmlns="http://www.w3.org/2000/svg"
                  role="img"
-                 aria-label="Minimalist map of Sweden with Luleå marked above the Arctic Circle">
+                 aria-label="Map of Sweden showing Luleå above the Arctic Circle in Norrbotten">
 
-              <!-- Sweden silhouette (simplified outline, clockwise from south) -->
+              <!-- Sea / water background -->
+              <rect x="0" y="20" width="300" height="505" fill="#ddf0f5" rx="8"/>
+
+              <!-- Sweden silhouette — light green fill -->
               <path class="sweden-body" d="
                 M60,509
                 L69,493 L92,486 L99,468 L107,451 L107,433
@@ -436,24 +439,26 @@
                 L35,381  L32,398  L39,426  L40,468  L47,493
                 Z"/>
 
-              <!-- Arctic Circle dashed line (66.5 °N → y ≈ 118) -->
-              <line x1="20" y1="118" x2="240" y2="118"
-                    stroke="#aaa" stroke-dasharray="6,4" stroke-width="0.9"/>
-              <text x="22" y="113" class="map-lbl-xs">Arctic</text>
-              <text x="22" y="127" class="map-lbl-xs">Circle</text>
+              <!-- Arctic Circle (66.5 °N → y ≈ 118) -->
+              <line x1="0" y1="118" x2="300" y2="118"
+                    stroke="#5a9e8a" stroke-dasharray="6,5" stroke-width="1"/>
+              <text x="5" y="113" class="map-lbl-xs">Arctic</text>
+              <text x="5" y="128" class="map-lbl-xs">Circle</text>
 
-              <!-- Luleå dot (65.58 °N, 22.16 °E → x≈191, y≈150) -->
-              <circle cx="191" cy="150" r="5.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
-              <text x="199" y="148" class="map-lbl-city">Luleå</text>
-              <text x="199" y="161" class="map-lbl-xs map-lbl-region">Norrbotten</text>
+              <!-- Luleå dot + leader line -->
+              <circle cx="191" cy="150" r="6" fill="#c0392b" stroke="#fff" stroke-width="2"/>
+              <line x1="197" y1="150" x2="212" y2="149"
+                    stroke="#c0392b" stroke-width="1" stroke-dasharray="2,2"/>
+              <text x="215" y="147" class="map-lbl-city">Luleå</text>
+              <text x="215" y="160" class="map-lbl-region">Norrbotten</text>
 
-              <!-- Stockholm dot (59.33 °N, 18.07 °E → x≈130, y≈369) -->
-              <circle cx="130" cy="369" r="3.5" fill="#777" stroke="#fff" stroke-width="1"/>
-              <text x="137" y="373" class="map-lbl-sm">Stockholm</text>
+              <!-- Stockholm dot -->
+              <circle cx="130" cy="369" r="4" fill="#555" stroke="#fff" stroke-width="1.5"/>
+              <text x="138" y="373" class="map-lbl-sm">Stockholm</text>
 
-              <!-- North compass -->
-              <circle cx="224" cy="50" r="14" fill="#bbb"/>
-              <text x="224" y="55" class="map-north" text-anchor="middle">N</text>
+              <!-- North compass rose -->
+              <circle cx="268" cy="48" r="17" fill="#5a9e8a" stroke="#fff" stroke-width="1.5"/>
+              <text x="268" y="53" class="map-north" text-anchor="middle">N</text>
             </svg>
 
           </div><!-- /.location-map-col -->
@@ -464,7 +469,9 @@
             </div>
             <div class="location-tz">
               <i class="fas fa-clock" aria-hidden="true"></i>
-              CET / CEST
+              <span class="tz-label">CET / CEST</span>
+              <span class="tz-sep" aria-hidden="true">·</span>
+              <span id="luleaClock" class="tz-clock" aria-live="polite" aria-label="Current time in Luleå">--:--:--</span>
             </div>
             <p class="location-desc">
               Based in <strong>Luleå, Norrbotten</strong> — above the Arctic Circle, at the heart of Nordic steelmaking and mineral processing country. Home to SSAB, LKAB, and a dense cluster of materials research institutions.

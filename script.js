@@ -416,3 +416,28 @@ function initProjectFilter() {
   const el = document.getElementById('year');
   if (el) el.textContent = new Date().getFullYear();
 })();
+
+
+/* ── 9. LULEÅ LIVE CLOCK (Europe/Stockholm = CET/CEST) ───────── */
+(function initClock() {
+  const el = document.getElementById('luleaClock');
+  if (!el) return;
+
+  function tick() {
+    try {
+      el.textContent = new Date().toLocaleTimeString('sv-SE', {
+        timeZone: 'Europe/Stockholm',
+        hour:     '2-digit',
+        minute:   '2-digit',
+        second:   '2-digit',
+        hour12:   false,
+      });
+    } catch {
+      /* Fallback if Intl timeZone not supported */
+      el.textContent = new Date().toTimeString().slice(0, 8);
+    }
+  }
+
+  tick();
+  setInterval(tick, 1000);
+})();
