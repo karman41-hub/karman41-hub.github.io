@@ -52,7 +52,7 @@
   </script>
 
   <!-- Inline SVG favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230a192f'/><text y='72' x='50' text-anchor='middle' font-size='60' font-family='monospace' fill='%2364ffda'>K</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23c0392b'/><text y='74' x='50' text-anchor='middle' font-size='64' font-family='monospace' font-weight='bold' fill='white'>K</text></svg>" />
 
   <title>Karthik Manu | Metallurgical Researcher</title>
 
@@ -81,7 +81,7 @@
 
         <div class="sidebar-header">
           <a href="#about" class="sidebar-logo" aria-label="Back to top">
-            <span class="logo-bracket">[</span>KM<span class="logo-bracket">]</span>
+            <span class="logo-bracket">[</span><span class="logo-k">K</span>M<span class="logo-bracket">]</span>
           </a>
           <h1 class="sidebar-name">Karthik Manu</h1>
           <h2 class="sidebar-title">Metallurgical Researcher</h2>
@@ -97,7 +97,6 @@
             <li><a href="#publications" class="nav-link"><span class="nav-line" aria-hidden="true"></span><span>Publications</span></a></li>
             <li><a href="#insights"     class="nav-link"><span class="nav-line" aria-hidden="true"></span><span>Insights</span></a></li>
             <li><a href="#contact"      class="nav-link"><span class="nav-line" aria-hidden="true"></span><span>Contact</span></a></li>
-            <li><a href="#location"     class="nav-link"><span class="nav-line" aria-hidden="true"></span><span>Location</span></a></li>
           </ul>
         </nav>
 
@@ -147,7 +146,6 @@
         <li><a href="#publications" class="mobile-nav-link">Publications</a></li>
         <li><a href="#insights"     class="mobile-nav-link">Insights</a></li>
         <li><a href="#contact"      class="mobile-nav-link">Contact</a></li>
-        <li><a href="#location"     class="mobile-nav-link">Location</a></li>
       </ul>
       <div class="mobile-social">
         <a href="https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
@@ -166,15 +164,17 @@
       <!-- ── ABOUT ────────────────────────────────────────────── -->
       <section id="about" class="section">
         <div class="section-heading reveal">
-          <span class="section-tag">// 01</span>
           <h2 class="section-title">About</h2>
         </div>
 
         <div class="about-grid">
+
+          <!-- col 1: photo -->
           <div class="about-photo-col reveal">
             <img src="assets/photo.jpg" alt="Karthik Manu — Metallurgical Researcher" class="about-photo" />
           </div>
 
+          <!-- col 2: text -->
           <div class="about-text-col">
             <blockquote class="about-hero-quote reveal">
               Curious about how metals flow, solidify, crack, and ultimately become engineered products. Now focusing on what happens <em>before</em> that too!
@@ -188,9 +188,6 @@
             </p>
             <p class="reveal">
               My research has produced 13 publications and conference contributions with over 163 citations, covering areas from alloy characterisation and high-temperature metallurgy to circular metallurgy and bio-based binder systems for iron and steel production.
-            </p>
-            <p class="reveal">
-              I am actively seeking PhD research programmes in process or computational metallurgy, industrial collaborations, and international networking opportunities in the steel and materials space.
             </p>
 
             <div class="about-highlights reveal">
@@ -225,14 +222,71 @@
               </a>
             </div>
           </div>
-        </div>
+
+          <!-- col 3: Sweden map + location info -->
+          <div class="about-map-col reveal">
+            <svg class="sweden-map" viewBox="0 20 300 505"
+                 xmlns="http://www.w3.org/2000/svg"
+                 role="img"
+                 aria-label="Map of Sweden showing Luleå above the Arctic Circle">
+
+              <rect x="0" y="20" width="300" height="505" fill="#ddf0f5" rx="8"/>
+
+              <path class="sweden-body" d="
+                M60,509 L69,493 L92,486 L99,468 L107,451 L107,433
+                L114,398 L129,381 L130,369 L139,356 L136,346
+                L121,325 L114,311 L118,275 L118,262 L139,241
+                L163,212 L181,188 L184,170 L191,150 L220,142
+                L210,118 L203,101 L210,83  L196,50  L167,28
+                L136,42  L121,67  L107,101 L92,136  L77,171
+                L67,205  L47,242  L41,276  L41,311  L41,346
+                L35,381  L32,398  L39,426  L40,468  L47,493
+                Z"/>
+
+              <!-- Arctic Circle (y ≈ 118) -->
+              <line x1="0" y1="118" x2="300" y2="118"
+                    stroke="#5a9e8a" stroke-dasharray="6,5" stroke-width="1.2"/>
+              <text x="5" y="110" class="map-lbl-xs">Arctic</text>
+              <text x="5" y="128" class="map-lbl-xs">Circle</text>
+
+              <!-- Luleå -->
+              <circle cx="191" cy="150" r="7" fill="#c0392b" stroke="#fff" stroke-width="2"/>
+              <line x1="198" y1="150" x2="213" y2="149"
+                    stroke="#c0392b" stroke-width="1" stroke-dasharray="2,2"/>
+              <text x="216" y="147" class="map-lbl-city">Luleå</text>
+              <text x="216" y="163" class="map-lbl-region">Norrbotten</text>
+
+              <!-- Stockholm -->
+              <circle cx="130" cy="369" r="5" fill="#555" stroke="#fff" stroke-width="1.5"/>
+              <text x="140" y="374" class="map-lbl-sm">Stockholm</text>
+
+              <!-- Compass -->
+              <circle cx="268" cy="50" r="18" fill="#5a9e8a" stroke="#fff" stroke-width="2"/>
+              <text x="268" y="56" class="map-north" text-anchor="middle">N</text>
+            </svg>
+
+            <div class="map-location-info">
+              <div class="location-coords">65.58° N &nbsp;·&nbsp; 22.16° E</div>
+              <div class="location-tz">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+                <span class="tz-label">CET / CEST</span>
+                <span class="tz-sep" aria-hidden="true">·</span>
+                <span id="luleaClock" class="tz-clock" aria-live="polite">--:--:--</span>
+              </div>
+              <div class="location-meta">
+                <span><i class="fas fa-snowflake" aria-hidden="true"></i> −30 °C winters</span>
+                <span><i class="fas fa-sun" aria-hidden="true"></i> Midnight sun</span>
+              </div>
+            </div>
+          </div><!-- /.about-map-col -->
+
+        </div><!-- /.about-grid -->
       </section>
 
 
       <!-- ── RESEARCH PRESENTATION ───────────────────────────────── -->
       <section id="presentation" class="section">
         <div class="section-heading reveal">
-          <span class="section-tag">// 02</span>
           <h2 class="section-title">Research</h2>
         </div>
         <p class="section-sub reveal">
@@ -262,7 +316,6 @@
       <!-- ── PUBLICATIONS ──────────────────────────────────────── -->
       <section id="publications" class="section">
         <div class="section-heading reveal">
-          <span class="section-tag">// 03</span>
           <h2 class="section-title">Publications</h2>
         </div>
         <p class="section-sub reveal">
@@ -309,7 +362,6 @@
       <!-- ── INSIGHTS ──────────────────────────────────────────── -->
       <section id="insights" class="section">
         <div class="section-heading reveal">
-          <span class="section-tag">// 04</span>
           <h2 class="section-title">Insights</h2>
         </div>
         <p class="section-sub reveal">
@@ -328,7 +380,6 @@
       <!-- ── CONTACT ───────────────────────────────────────────── -->
       <section id="contact" class="section">
         <div class="section-heading reveal">
-          <span class="section-tag">// 05</span>
           <h2 class="section-title">Contact</h2>
         </div>
         <p class="contact-intro reveal">
@@ -418,83 +469,6 @@
             </div>
           </div>
 
-        </div>
-      </section>
-
-
-      <!-- ── LOCATION ─────────────────────────────────────────── -->
-      <section id="location" class="section">
-        <div class="section-heading reveal">
-          <span class="section-tag">// 06</span>
-          <h2 class="section-title">Location</h2>
-        </div>
-
-        <div class="location-wrap reveal">
-          <div class="location-map-col">
-
-            <svg class="sweden-map" viewBox="0 20 300 505"
-                 xmlns="http://www.w3.org/2000/svg"
-                 role="img"
-                 aria-label="Map of Sweden showing Luleå above the Arctic Circle in Norrbotten">
-
-              <!-- Sea / water background -->
-              <rect x="0" y="20" width="300" height="505" fill="#ddf0f5" rx="8"/>
-
-              <!-- Sweden silhouette — light green fill -->
-              <path class="sweden-body" d="
-                M60,509
-                L69,493 L92,486 L99,468 L107,451 L107,433
-                L114,398 L129,381 L130,369 L139,356 L136,346
-                L121,325 L114,311 L118,275 L118,262 L139,241
-                L163,212 L181,188 L184,170 L191,150 L220,142
-                L210,118 L203,101 L210,83  L196,50  L167,28
-                L136,42  L121,67  L107,101 L92,136  L77,171
-                L67,205  L47,242  L41,276  L41,311  L41,346
-                L35,381  L32,398  L39,426  L40,468  L47,493
-                Z"/>
-
-              <!-- Arctic Circle (66.5 °N → y ≈ 118) -->
-              <line x1="0" y1="118" x2="300" y2="118"
-                    stroke="#5a9e8a" stroke-dasharray="6,5" stroke-width="1"/>
-              <text x="5" y="113" class="map-lbl-xs">Arctic</text>
-              <text x="5" y="128" class="map-lbl-xs">Circle</text>
-
-              <!-- Luleå dot + leader line -->
-              <circle cx="191" cy="150" r="6" fill="#c0392b" stroke="#fff" stroke-width="2"/>
-              <line x1="197" y1="150" x2="212" y2="149"
-                    stroke="#c0392b" stroke-width="1" stroke-dasharray="2,2"/>
-              <text x="215" y="147" class="map-lbl-city">Luleå</text>
-              <text x="215" y="160" class="map-lbl-region">Norrbotten</text>
-
-              <!-- Stockholm dot -->
-              <circle cx="130" cy="369" r="4" fill="#555" stroke="#fff" stroke-width="1.5"/>
-              <text x="138" y="373" class="map-lbl-sm">Stockholm</text>
-
-              <!-- North compass rose -->
-              <circle cx="268" cy="48" r="17" fill="#5a9e8a" stroke="#fff" stroke-width="1.5"/>
-              <text x="268" y="53" class="map-north" text-anchor="middle">N</text>
-            </svg>
-
-          </div><!-- /.location-map-col -->
-
-          <div class="location-info-col">
-            <div class="location-stat">
-              <span class="location-coords">65.58° N &nbsp;·&nbsp; 22.16° E</span>
-            </div>
-            <div class="location-tz">
-              <i class="fas fa-clock" aria-hidden="true"></i>
-              <span class="tz-label">CET / CEST</span>
-              <span class="tz-sep" aria-hidden="true">·</span>
-              <span id="luleaClock" class="tz-clock" aria-live="polite" aria-label="Current time in Luleå">--:--:--</span>
-            </div>
-            <p class="location-desc">
-              Based in <strong>Luleå, Norrbotten</strong> — above the Arctic Circle, at the heart of Nordic steelmaking and mineral processing country. Home to SSAB, LKAB, and a dense cluster of materials research institutions.
-            </p>
-            <div class="location-meta">
-              <span><i class="fas fa-snowflake" aria-hidden="true"></i> −30 °C winters</span>
-              <span><i class="fas fa-sun" aria-hidden="true"></i> Midnight sun in June</span>
-            </div>
-          </div><!-- /.location-info-col -->
         </div>
       </section>
 

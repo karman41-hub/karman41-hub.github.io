@@ -64,7 +64,7 @@ ul { list-style: none; }
 /* ── 4. LAYOUT ──────────────────────────────────────────────── */
 .layout {
   display: flex;
-  max-width: 1300px;
+  max-width: 1600px;
   margin: 0 auto;
   min-height: 100vh;
   position: relative;
@@ -104,7 +104,8 @@ ul { list-style: none; }
   transition: color var(--dur);
 }
 .sidebar-logo:hover { color: var(--green); }
-.logo-bracket { color: var(--green); }
+.logo-bracket { color: var(--lightest-slate); }
+.logo-k       { color: var(--green); }
 
 /* Name */
 .sidebar-name {
@@ -256,7 +257,7 @@ ul { list-style: none; }
 .content {
   flex: 1;
   min-width: 0;
-  padding: 5rem 5rem 3rem 4rem;
+  padding: 5rem 3.5rem 3rem 3rem;
 }
 
 /* ── 7. SECTIONS ────────────────────────────────────────────── */
@@ -354,9 +355,68 @@ ul { list-style: none; }
 /* ── 9. ABOUT SECTION ───────────────────────────────────────── */
 .about-grid {
   display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 3rem;
+  grid-template-columns: 190px 1fr 240px;
+  gap: 2.5rem;
   align-items: start;
+}
+
+/* Map column in about grid */
+.about-map-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  position: sticky;
+  top: 2rem;
+}
+
+.about-map-col .sweden-map {
+  width: 100%;
+  max-width: 240px;
+}
+
+.map-location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.map-location-info .location-coords {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--lightest-slate);
+  letter-spacing: 0.04em;
+}
+
+.map-location-info .location-tz {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--green);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.map-location-info .location-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--slate);
+}
+
+.map-location-info .location-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.map-location-info .location-meta i {
+  color: var(--green);
+  font-size: 0.65rem;
 }
 
 .about-photo {
@@ -1058,7 +1118,12 @@ ul { list-style: none; }
 /* ── 19. RESPONSIVE — 1100px ────────────────────────────────── */
 @media (max-width: 1100px) {
   :root { --sidebar-w: 320px; }
-  .content { padding: 5rem 3.5rem 3rem 3rem; }
+  .content { padding: 5rem 2.5rem 3rem 2.5rem; }
+  /* Drop to 2-col: hide map at medium widths */
+  .about-grid {
+    grid-template-columns: 170px 1fr;
+  }
+  .about-map-col { display: none; }
 }
 
 /* ── 20. RESPONSIVE — 768px (mobile breakpoint) ─────────────── */
@@ -1164,6 +1229,7 @@ ul { list-style: none; }
 
   .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .about-photo-col { display: none; }
+  .about-map-col { display: none; }
 
   .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
   .form-row { grid-template-columns: 1fr; }
@@ -1595,34 +1661,34 @@ ul { list-style: none; }
 .map-lbl-xs {
   paint-order: stroke fill;
   stroke: #fff;
-  stroke-width: 3px;
+  stroke-width: 4px;
   stroke-linejoin: round;
 }
 
 .map-lbl-city {
   font-family: var(--font-sans);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
   fill: #111;
 }
 .map-lbl-region {
   font-family: var(--font-sans);
-  font-size: 8.5px;
+  font-size: 12px;
   fill: #333;
 }
 .map-lbl-sm {
   font-family: var(--font-sans);
-  font-size: 9px;
+  font-size: 12px;
   fill: #333;
 }
 .map-lbl-xs {
   font-family: var(--font-sans);
-  font-size: 7.5px;
+  font-size: 10px;
   fill: #2d7a5e;
 }
 .map-north {
   font-family: var(--font-sans);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 800;
   fill: #fff;
 }
