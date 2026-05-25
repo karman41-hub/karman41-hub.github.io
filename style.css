@@ -419,6 +419,40 @@ ul { list-style: none; }
   font-size: 0.65rem;
 }
 
+.map-location-desc {
+  font-size: 0.72rem;
+  color: var(--slate);
+  line-height: 1.6;
+  margin-top: 0.25rem;
+}
+.map-location-desc strong {
+  color: var(--lightest-slate);
+  font-weight: 600;
+}
+
+/* Clickable map wrapper */
+.sweden-map-link {
+  display: block;
+  border-radius: 10px;
+  transition: opacity var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  outline: none;
+}
+.sweden-map-link:hover .sweden-map,
+.sweden-map-link:focus .sweden-map {
+  box-shadow: 0 0 0 3px var(--green), 0 6px 24px var(--navy-shadow);
+}
+.sweden-map-link:hover::after,
+.sweden-map-link:focus::after {
+  content: '↗ Open in Maps';
+  display: block;
+  text-align: center;
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  color: var(--green);
+  margin-top: 0.3rem;
+  letter-spacing: 0.06em;
+}
+
 .about-photo {
   width: 200px;
   aspect-ratio: 1;

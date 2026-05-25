@@ -194,8 +194,8 @@
               <span class="hi-tag"><i class="fas fa-check" aria-hidden="true"></i> Continuous casting &amp; physical modelling</span>
               <span class="hi-tag"><i class="fas fa-check" aria-hidden="true"></i> Bio-based &amp; sustainable agglomeration</span>
               <span class="hi-tag"><i class="fas fa-check" aria-hidden="true"></i> Circular metallurgy &amp; waste valorisation</span>
-              <span class="hi-tag"><i class="fas fa-check" aria-hidden="true"></i> High-temperature pyrometallurgy</span>
-              <span class="hi-tag"><i class="fas fa-check" aria-hidden="true"></i> AI / ML in process engineering</span>
+              <span class="hi-tag"><i class="fas fa-check" aria-hidden="true"></i> Pyrometallurgical recovery</span>
+              <span class="hi-tag"><i class="fas fa-check" aria-hidden="true"></i> SMART processes using AI</span>
             </div>
 
             <div class="about-tools reveal">
@@ -225,6 +225,11 @@
 
           <!-- col 3: Sweden map + location info -->
           <div class="about-map-col reveal">
+            <a href="https://www.google.com/maps/place/Lule%C3%A5,+Sweden/@65.5848,21.4971,11z"
+               target="_blank" rel="noopener"
+               class="sweden-map-link"
+               aria-label="Open Luleå, Sweden in Google Maps"
+               title="Open in Google Maps">
             <svg class="sweden-map" viewBox="0 20 300 505"
                  xmlns="http://www.w3.org/2000/svg"
                  role="img"
@@ -264,6 +269,7 @@
               <circle cx="268" cy="50" r="18" fill="#5a9e8a" stroke="#fff" stroke-width="2"/>
               <text x="268" y="56" class="map-north" text-anchor="middle">N</text>
             </svg>
+            </a><!-- /.sweden-map-link -->
 
             <div class="map-location-info">
               <div class="location-coords">65.58° N &nbsp;·&nbsp; 22.16° E</div>
@@ -277,6 +283,11 @@
                 <span><i class="fas fa-snowflake" aria-hidden="true"></i> −30 °C winters</span>
                 <span><i class="fas fa-sun" aria-hidden="true"></i> Midnight sun</span>
               </div>
+              <p class="map-location-desc">
+                Above the Arctic Circle — at the heart of Nordic steelmaking country. Home to
+                <strong>SSAB</strong>, <strong>LKAB</strong>, and a dense cluster of materials
+                research institutions.
+              </p>
             </div>
           </div><!-- /.about-map-col -->
 
@@ -289,10 +300,6 @@
         <div class="section-heading reveal">
           <h2 class="section-title">Research</h2>
         </div>
-        <p class="section-sub reveal">
-          A visual overview of my major ongoing research interests and selected work — drawn directly from <code>live_ppt.pptx</code>. Push an updated PPT to auto-refresh via GitHub Actions.
-        </p>
-
         <div class="slideshow-container reveal" id="slideshowContainer">
           <div class="slides-wrapper" id="slidesWrapper">
             <!-- populated by script.js from data.json slides[] -->
@@ -318,7 +325,25 @@
         <div class="section-heading reveal">
           <h2 class="section-title">Publications</h2>
         </div>
-        <p class="section-sub reveal">
+
+        <!-- Citation Bubble Timeline -->
+        <p class="bc-hint reveal">
+          <i class="fas fa-circle-info" aria-hidden="true"></i>
+          Bubble size reflects citation count &nbsp;·&nbsp; Hover to explore &nbsp;·&nbsp; Click to open paper
+        </p>
+        <div class="pub-bubble-wrap reveal" id="pubBubble" aria-label="Citation timeline chart"></div>
+
+        <!-- Citation counts -->
+        <div class="pub-stats reveal">
+          <span class="mono">Citations: <strong id="citationCount">—</strong></span>
+          <span class="divider" aria-hidden="true">·</span>
+          <span class="mono">h-index: <strong id="hIndex">—</strong></span>
+          <span class="divider" aria-hidden="true">·</span>
+          <span class="mono">i10-index: <strong id="i10Index">—</strong></span>
+        </div>
+
+        <!-- Description + links -->
+        <p class="section-sub reveal" style="margin-top:1.5rem;">
           Peer-reviewed articles and conference contributions. Full profile on Google Scholar.
         </p>
 
@@ -328,34 +353,13 @@
             <i class="fas fa-arrow-up-right-from-square btn-arrow" aria-hidden="true"></i>
           </a>
           <a href="https://orcid.org/0000-0001-5128-6481" target="_blank" rel="noopener" class="btn btn-ghost">
-            <i class="fas fa-id-badge" aria-hidden="true"></i> ORCID Record
+            <i class="fas fa-id-badge" aria-hidden="true"></i> ORCID
+            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true" style="font-size:0.65rem;"></i>
           </a>
         </div>
 
-        <!-- Citation Bubble Timeline -->
-        <p class="bc-hint reveal">
-          <i class="fas fa-circle-info" aria-hidden="true"></i>
-          Bubble size reflects citation count &nbsp;·&nbsp; Hover to explore &nbsp;·&nbsp; Click to open paper
-        </p>
-        <div class="pub-bubble-wrap reveal" id="pubBubble" aria-label="Citation timeline chart"></div>
-
-        <!-- Full list — collapsible -->
-        <details class="pub-list-details">
-          <summary class="pub-list-summary">
-            <i class="fas fa-list" aria-hidden="true"></i>
-            Full publication list
-            <i class="fas fa-chevron-right pub-chevron" aria-hidden="true"></i>
-          </summary>
-          <div class="publications-list" id="publicationsList"></div>
-        </details>
-
-        <div class="pub-stats reveal">
-          <span class="mono">Citations: <strong id="citationCount">—</strong></span>
-          <span class="divider" aria-hidden="true">·</span>
-          <span class="mono">h-index: <strong id="hIndex">—</strong></span>
-          <span class="divider" aria-hidden="true">·</span>
-          <span class="mono">i10-index: <strong id="i10Index">—</strong></span>
-        </div>
+        <!-- Full publication list (hidden — data still rendered for bubble chart) -->
+        <div class="publications-list" id="publicationsList" style="display:none;" aria-hidden="true"></div>
       </section>
 
 
@@ -383,7 +387,7 @@
           <h2 class="section-title">Contact</h2>
         </div>
         <p class="contact-intro reveal">
-          Reach out for industrial collaborations, international networking, PhD research opportunities, or just a good conversation about metals.
+          Reach out for industrial collaborations, international networking, PhD research opportunities, or just a good conversation about metallurgy.
         </p>
 
         <div class="contact-grid">
@@ -446,7 +450,7 @@
               <div class="form-group">
                 <label for="fsubject">Subject</label>
                 <input type="text" id="fsubject" name="subject"
-                       placeholder="Research Collaboration / PhD Enquiry / Consulting" />
+                       placeholder="Research Collaboration / PhD Enquiry / Industrial Partnership" />
               </div>
               <div class="form-group">
                 <label for="fmessage">Message <span class="required" aria-hidden="true">*</span></label>
