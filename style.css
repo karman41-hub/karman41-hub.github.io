@@ -356,22 +356,23 @@ ul { list-style: none; }
   align-items: start;
 }
 
-.about-photo-placeholder {
-  width: 180px;
+.about-photo {
+  width: 200px;
   aspect-ratio: 1;
   border-radius: 8px;
-  background: var(--light-navy);
+  object-fit: cover;
+  object-position: center top;
   border: 2px solid var(--lightest-navy);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  color: var(--slate);
-  transition: border-color var(--dur);
+  filter: grayscale(15%);
+  transition: filter var(--dur) var(--ease), border-color var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease);
+  display: block;
 }
-.about-photo-placeholder:hover { border-color: var(--green); }
-
-/* Replace placeholder with: img { width:180px; border-radius:8px; object-fit:cover; } */
+.about-photo:hover {
+  filter: grayscale(0%);
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px var(--green-tint);
+}
 
 .about-text-col p {
   font-size: 0.9rem;
