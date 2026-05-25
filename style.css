@@ -1142,49 +1142,26 @@ ul { list-style: none; }
 .mono { font-family: var(--font-mono); }
 .text-slate { color: var(--slate); }
 
-/* ── NO TEXT-CURSOR ON UI ELEMENTS ──────────────────────────── */
-/* Prevents the blinking I-beam / caret when clicking on labels,
-   headings, nav, badges and other non-editable chrome.          */
-.sidebar, .sidebar-name, .sidebar-title, .sidebar-tagline,
-.sidebar-nav, .sidebar-footer, .availability-badge,
-.nav-link, .mobile-nav, .mobile-nav-link,
-.section-heading, .section-title, .section-sub,
-.section-tag, .section-footer,
-.about-highlights, .hi-tag,
-.about-tools, .about-tools-label, .tool-chip,
-.about-stats, .stat-card, .stat-num, .stat-label,
-.about-ctas,
-.map-location-info, .location-coords, .location-tz,
-.location-meta, .map-location-desc,
-.pub-stats, .pub-meta-row, .pub-year, .pub-year-col,
-.pub-type-badge, .pub-cited, .pub-actions,
-.scholar-links, .bc-hint,
-.project-year, .project-year-col, .project-tag,
-.project-outcomes, .outcome, .project-tech,
-.filter-bar, .filter-btn,
-.blog-date, .blog-date-col, .blog-category,
-.blog-meta, .blog-icon-wrap,
-.contact-label, .open-to, .open-to-header,
-.contact-links, .contact-icon-wrap,
-.pub-list-summary, .pub-list-details summary,
-h1, h2, h3, label {
+/* ── GLOBAL CURSOR LOCK ──────────────────────────────────────── */
+/* Never show the I-beam / text caret anywhere on the page.
+   Everything defaults to the arrow; clickables get the hand.   */
+*, *::before, *::after {
+  cursor: default !important;
   user-select: none;
-  cursor: default;
 }
 
-/* Restore pointer on anything clickable */
 a, button, .btn, .nav-link, .mobile-nav-link,
 .social-icon, .contact-item, .pub-link,
 .filter-btn, .slide-btn, .slide-dot,
 .pub-list-summary, .bc-node, .sweden-map-link,
 .blog-read-more, .link-arrow, [role="button"],
 [tabindex="0"] {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
-/* Keep native text cursor inside form fields */
+/* Form fields still need text cursor and must be typeable */
 input, textarea, select {
-  cursor: text;
+  cursor: text !important;
   user-select: text;
 }
 
