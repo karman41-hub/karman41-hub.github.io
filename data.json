@@ -1,143 +1,214 @@
 {
   "stats": [
-    { "num": "5+",  "label": "Years Industrial & Research Experience" },
-    { "num": "10+", "label": "Publications & Conference Papers" },
-    { "num": "3",   "label": "Countries of Professional Engagement" }
+    { "num": "6+",  "label": "Years Research & Industrial Experience" },
+    { "num": "13",  "label": "Publications & Conference Contributions" },
+    { "num": "163", "label": "Total Citations (Google Scholar)" }
   ],
 
   "citations": {
-    "total": "—",
-    "hIndex": "—",
-    "i10Index": "—"
+    "total": "163",
+    "hIndex": "5",
+    "i10Index": "3"
   },
 
   "publications": [
     {
-      "year": "2021",
-      "type": "Journal",
-      "title": "Morphological and mechanical behaviour of Cu–Sn alloys—a review",
-      "authors": "<strong>Manu, K.</strong>, J Abhinav, Karthik V Shankar",
-      "venue": "<em>Metals and Materials International</em>",
-      "doi": "#",
-      "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QOiqZ6MAAAAJ&citation_for_view=QOiqZ6MAAAAJ:W7OEmFMy1HYC"
-    },
-    {
-      "year": "2023",
+      "year": "2026",
       "type": "Conference",
-      "title": "Physical Modelling of Tundish Fluid Flow: Impact of Turbulence Inhibitor Geometry on Inclusion Removal Efficiency",
-      "authors": "<strong>Manu, K.</strong>, [Co-author A], [Co-author B]",
-      "venue": "<em>Proceedings of AISTech 2023</em>, Pittsburgh, PA, USA",
+      "title": "Development of Extrusion-Based Biocarbon-Chromite Briquettes for Sustainable Ferrochrome Production in Submerged Arc Furnace",
+      "authors": "<strong>K. Manu</strong>, E.A.E. Mousa, A. Tomy, L. Önnhagen",
+      "venue": "<em>TMS 2026 — 155th Annual Meeting &amp; Exhibition</em>",
       "doi": "#",
-      "scholar": "https://scholar.google.com/citations?user=QOiqZ6MAAAAJ&hl=en"
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
+    },
+    {
+      "year": "2025",
+      "type": "Conference",
+      "title": "A Pathway to Optimize Nozzle Design and Metal Flow Stability in Continuous Casting Processes",
+      "authors": "<strong>K. Manu</strong>, P.R. Lopez, J. Eck, A. Sundström, Nilsson",
+      "venue": "<em>Proceedings of the 34th International Conference on Metallurgy and Materials</em>",
+      "doi": "#",
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
+    },
+    {
+      "year": "2025",
+      "type": "Journal",
+      "title": "Influence of Pre-Existing Stacking Fault on the Mechanical and Microstructural Behavior of Cu–Zn Alloys — A Molecular Dynamics Study",
+      "authors": "A.S. Duge, P.R. Suprio, E.P. Satheeshan, J.S. Babu, K.V. Shankar, <strong>K. Manu</strong>",
+      "venue": "<em>Journal of King Saud University — Engineering Sciences</em>",
+      "doi": "#",
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
+    },
+    {
+      "year": "2024",
+      "type": "Journal",
+      "title": "Optimization of Tensile Properties by Rotary Friction Welded Dissimilar 2014 T6 and 6082 T6 Aluminium Alloys",
+      "authors": "N. Settu, G.K. Kesavan, A. Subramanian, M. Ramasamy, A. Rangesh, R. Settu",
+      "venue": "<em>International Journal on Interactive Design and Manufacturing (IJIDeM)</em>, vol. 18, 2024",
+      "doi": "https://doi.org/10.1007/s12008-024-01946-4",
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
     },
     {
       "year": "2023",
       "type": "Journal",
-      "title": "Thermodynamic Assessment of Tramp Element Behaviour in High-Scrap EAF Steelmaking",
-      "authors": "<strong>Manu, K.</strong>, [Co-author A]",
-      "venue": "<em>Metallurgical and Materials Transactions B</em>, vol. XX, pp. XXX–XXX",
+      "title": "Maximizing the Recycling of Iron Ore Pellets Fines Using Innovative Organic Binders",
+      "authors": "<strong>K. Manu</strong>, E. Mousa, H. Ahmed, M. Elsadek, W. Yang",
+      "venue": "<em>Materials</em>, vol. 16, no. 10, p. 3888, MDPI, 2023",
+      "doi": "https://doi.org/10.3390/ma16103888",
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
+    },
+    {
+      "year": "2023",
+      "type": "Report",
+      "title": "Agglomerates for Next Generation Lignin-Based Steel Making",
+      "authors": "<strong>K. Manu</strong>, E. Mousa, D. Rusanova-Naydenova, M. Elmer",
+      "venue": "<em>Swerim AB</em>, Luleå, Sweden",
       "doi": "#",
-      "scholar": "https://scholar.google.com/citations?user=QOiqZ6MAAAAJ&hl=en"
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
+    },
+    {
+      "year": "2022",
+      "type": "Journal",
+      "title": "Influence of Solutionising Time on the Dendrite Morphology and Mechanical Behaviour of Al-Si-Mg-Ni Hypoeutectic Alloy",
+      "authors": "F.J. Eby, S.A. Narayanan, R. Abhiram, M.V. Navaneeth, <strong>K. Manu</strong>, K.V. Shankar",
+      "venue": "<em>Silicon</em>, Springer, 2022",
+      "doi": "https://doi.org/10.1007/s12633-021-01401-z",
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
     },
     {
       "year": "2022",
       "type": "Conference",
-      "title": "Electromagnetic Mould Level Sensor Response Under Varying Slag Compositions: Experimental Characterisation and Calibration",
-      "authors": "<strong>Manu, K.</strong>, [Co-author A], [Co-author B], [Co-author C]",
-      "venue": "<em>Proceedings of SCANMET VI</em>, Luleå, Sweden",
+      "title": "Potential Approach for Recycling Iron Ore Pellet Fines Using Novel Organic Binders for Hydrogen-Based Direct Reduction",
+      "authors": "<strong>K. Manu</strong>",
+      "venue": "<em>Swerim / HYBRIT Initiative</em>, Luleå, Sweden, 2022",
       "doi": "#",
-      "scholar": "https://scholar.google.com/citations?user=QOiqZ6MAAAAJ&hl=en"
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
     },
     {
       "year": "2021",
       "type": "Journal",
-      "title": "Breakout Detection in Continuous Casting Using LSTM Neural Networks on Thermocouple Array Data",
-      "authors": "<strong>Manu, K.</strong>, [Co-author A]",
-      "venue": "<em>Steel Research International</em>, vol. XX, no. X",
+      "title": "Morphological and Mechanical Behaviour of Cu–Sn Alloys — A Review",
+      "authors": "<strong>K. Manu</strong>, J. Abhinav, K.V. Shankar",
+      "venue": "<em>Metals and Materials International</em>, Springer, 2021",
+      "doi": "https://doi.org/10.1007/s12540-020-00899-z",
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
+    },
+    {
+      "year": "2021",
+      "type": "Journal",
+      "title": "Titanium in Cast Cu-Sn Alloys — A Review",
+      "authors": "<strong>K. Manu</strong>, J. Jezierski, M.R.S. Ganesh, K.V. Shankar, S.A. Narayanan",
+      "venue": "<em>Materials</em>, vol. 14, no. 16, p. 4587, MDPI, 2021",
+      "doi": "https://doi.org/10.3390/ma14164587",
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
+    },
+    {
+      "year": "2021",
+      "type": "Journal",
+      "title": "Solutionising Temperature Influence on the Morphological and Mechanical Characteristics of Al–Si–Mg–Ni Hypoeutectic Alloys",
+      "authors": "K.V. Shankar, <strong>K. Manu</strong>, A.N. Raj, A. Mukund, A.S. Nair, S. Nived, A. Premkumar",
+      "venue": "<em>Journal of The Institution of Engineers (India): Series D</em>, Springer, 2021",
+      "doi": "https://doi.org/10.1007/s40033-021-00259-0",
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
+    },
+    {
+      "year": "2020",
+      "type": "Journal",
+      "title": "Design and Implementation of Hybrid VM Migration Algorithm in Intra-Cluster Environment",
+      "authors": "B. Sahana, K.B. Shankar, M. Karthik, K. Chalwadi, A. Deshapande",
+      "venue": "<em>Solid State Technology</em>, vol. 63, no. 6, 2020",
       "doi": "#",
-      "scholar": "https://scholar.google.com/citations?user=QOiqZ6MAAAAJ&hl=en"
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
+    },
+    {
+      "year": "2022",
+      "type": "Report",
+      "title": "Utvecklning av bio-briketter för ferrokromproduktion i nedsänkt båugn (Bio4SAF)",
+      "authors": "E. Mousa, <strong>K. Manu</strong>, J. Orre, L. Önnhagen",
+      "venue": "<em>Swerim AB</em>, Luleå, Sweden",
+      "doi": "#",
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en"
     }
   ],
 
   "projects": [
     {
+      "category": "recycling",
+      "tag": "Recycling Metallurgy",
+      "year": "2022–2023",
+      "title": "Iron Ore Pellet Fines Recycling with Innovative Organic Binders",
+      "desc": "Developed and characterised novel organic binder systems to maximise the reuse of iron ore pellet fines — typically landfilled waste — back into the iron ore pelletisation process. Work conducted at Swerim AB, Luleå.",
+      "outcomes": [
+        { "icon": "fa-file-alt",    "text": "Published in <em>Materials</em>, MDPI 2023" },
+        { "icon": "fa-quote-right", "text": "11 citations and growing" }
+      ],
+      "tech": ["Organic Binders", "Pelletisation", "Compression Testing", "Sustainability"]
+    },
+    {
+      "category": "recycling casting",
+      "tag": "Bio-Based Metallurgy",
+      "year": "2023–2026",
+      "title": "Biocarbon-Chromite Briquettes for Ferrochrome Production — Bio4SAF",
+      "desc": "Developed extrusion-based biocarbon-chromite briquettes to partially replace fossil-based reductants in submerged arc furnace (SAF) ferrochrome production. Part of the Swerim Bio4SAF initiative targeting lower CO₂ emissions in ferroalloy production.",
+      "outcomes": [
+        { "icon": "fa-microphone", "text": "Presented at TMS 2026, Las Vegas" },
+        { "icon": "fa-leaf",       "text": "Swerim Bio4SAF project deliverable" }
+      ],
+      "tech": ["Biocarbon", "Extrusion", "SAF", "Ferrochrome", "Circular Economy"]
+    },
+    {
       "category": "casting modelling",
       "tag": "Continuous Casting",
-      "year": "2023–2024",
-      "title": "Mould Flux Viscosity Measurement at Casting Temperatures",
-      "desc": "Developed a high-temperature viscometer setup for in-situ characterisation of mould flux rheology above 1300 °C. Results validated against plant-measured oscillation mark severity and surface defect indices.",
+      "year": "2024–2025",
+      "title": "Nozzle Design & Metal Flow Stability in Continuous Casting",
+      "desc": "Investigated the influence of submerged entry nozzle (SEN) geometry on metal flow patterns and flow stability in the continuous casting mould. Combined physical and numerical modelling approaches to develop optimised nozzle configurations.",
       "outcomes": [
-        { "icon": "fa-arrow-trend-up", "text": "15% reduction in surface defects" },
-        { "icon": "fa-flask",          "text": "Novel flux family characterised" }
+        { "icon": "fa-microphone",    "text": "Presented at 34th Int'l Metallurgy Conference 2025" },
+        { "icon": "fa-ruler-combined","text": "Improved flow uniformity through nozzle optimisation" }
       ],
-      "tech": ["Viscometry", "Thermodynamics", "FactSage"]
-    },
-    {
-      "category": "modelling",
-      "tag": "Physical Modelling",
-      "year": "2022–2023",
-      "title": "Scaled Water Model of Tundish Flow & Inclusion Removal",
-      "desc": "Built a 1:3 scale water model of a single-strand tundish to investigate the effect of turbulence inhibitors and dams on inclusion removal efficiency, using tracer injection and PIV flow mapping.",
-      "outcomes": [
-        { "icon": "fa-arrow-trend-up", "text": "22% improvement in inclusion removal" },
-        { "icon": "fa-ruler-combined", "text": "CFD model validated" }
-      ],
-      "tech": ["PIV", "Water Model", "CFD", "ANSYS"]
-    },
-    {
-      "category": "digital casting",
-      "tag": "Digitalisation",
-      "year": "2023–Present",
-      "title": "Machine Learning Model for Breakout Prediction in Continuous Casting",
-      "desc": "Developed an LSTM-based early warning model for mould breakout events using thermocouple array data from a slab caster. Achieved >92% detection accuracy with a 45-second advance warning window.",
-      "outcomes": [
-        { "icon": "fa-shield", "text": "92% breakout detection accuracy" },
-        { "icon": "fa-clock",  "text": "45 s advance warning" }
-      ],
-      "tech": ["LSTM", "Python", "Sensor Data", "Time Series"]
+      "tech": ["CFD", "Physical Modelling", "SEN Geometry", "Continuous Casting"]
     },
     {
       "category": "recycling",
-      "tag": "Recycling Metallurgy",
-      "year": "2022",
-      "title": "Tramp Element Dilution Strategies for High-Scrap EAF Heats",
-      "desc": "Investigated thermodynamic and kinetic strategies for managing Cu, Sn, and Ni accumulation in high-scrap-rate EAF steelmaking, combining FactSage modelling with industrial trial data.",
+      "tag": "Green Steelmaking",
+      "year": "2022–Present",
+      "title": "Lignin-Based Agglomerates for Next-Generation Steelmaking",
+      "desc": "Developing bio-based agglomerate systems using lignin as a sustainable binder for steel and ferroalloy production, targeting replacement of conventional fossil-derived binders. Collaborative research at Swerim AB with industry partners.",
       "outcomes": [
-        { "icon": "fa-recycle", "text": "30% higher scrap utilisation" },
-        { "icon": "fa-leaf",    "text": "Reduced CO₂ intensity" }
+        { "icon": "fa-leaf",    "text": "Novel bio-based binder system developed" },
+        { "icon": "fa-sync",   "text": "Ongoing Swerim research programme" }
       ],
-      "tech": ["FactSage", "EAF", "Scrap Sorting"]
+      "tech": ["Lignin", "Agglomeration", "Bio-Based Materials", "Steelmaking"]
     },
     {
-      "category": "casting",
-      "tag": "Industrial Measurement",
-      "year": "2021–2022",
-      "title": "Electromagnetic Mould Level Sensor Calibration Protocol",
-      "desc": "Designed and validated a calibration methodology for electromagnetic mould level sensors under varying slag layer compositions and steel grades, improving signal reliability at low casting speeds.",
+      "category": "modelling",
+      "tag": "Alloy Research",
+      "year": "2019–2021",
+      "title": "Copper-Tin Alloy Characterisation — Comprehensive Review Studies",
+      "desc": "Conducted extensive literature reviews and experimental characterisation of Cu-Sn and Ti-Cu-Sn alloy systems, covering morphological, mechanical, and thermophysical properties. Results published as two widely cited review articles.",
       "outcomes": [
-        { "icon": "fa-signal",   "text": "±1.2 mm level accuracy" },
-        { "icon": "fa-industry", "text": "Deployed on 3 caster strands" }
+        { "icon": "fa-quote-right", "text": "93 citations — <em>Metals &amp; Materials International</em>, Springer 2021" },
+        { "icon": "fa-quote-right", "text": "41 citations — <em>Materials</em>, MDPI 2021" }
       ],
-      "tech": ["EM Sensors", "Signal Processing", "MATLAB"]
+      "tech": ["Cu-Sn Alloys", "Ti Addition", "Casting Metallurgy", "Mechanical Testing"]
     },
     {
-      "category": "digital modelling",
-      "tag": "Digital Twin",
-      "year": "2024–Present",
-      "title": "Digital Twin Framework for Ladle–Tundish Heat Transfer",
-      "desc": "Developing a physics-informed digital twin that integrates real-time temperature sensor data with a reduced-order thermal model to predict tundish steel temperature trajectories during casting sequences.",
+      "category": "modelling",
+      "tag": "Heat Treatment",
+      "year": "2019–2022",
+      "title": "Al–Si–Mg–Ni Hypoeutectic Alloy Heat Treatment Optimisation",
+      "desc": "Studied the effect of solutionising temperature and time on the dendrite morphology and mechanical behaviour of Al-Si-Mg-Ni hypoeutectic alloys. Characterised microstructural evolution using SEM/EDS and correlated with tensile and hardness outcomes.",
       "outcomes": [
-        { "icon": "fa-thermometer-half", "text": "±3 °C prediction accuracy" },
-        { "icon": "fa-sync",             "text": "Real-time capable" }
+        { "icon": "fa-file-alt",    "text": "Two peer-reviewed publications (Springer, 2021–2022)" },
+        { "icon": "fa-award",       "text": "14 combined citations" }
       ],
-      "tech": ["Digital Twin", "Python", "Physics-Informed ML"]
+      "tech": ["Solution Heat Treatment", "SEM / EDS", "Hardness Testing", "Alloy Design"]
     }
   ],
 
   "blog": [
     {
       "icon": "fa-brain",
-      "color": "",
       "category": "Digitalisation",
       "date": "March 2024",
       "readTime": "7 min read",
@@ -147,7 +218,6 @@
     },
     {
       "icon": "fa-water",
-      "color": "teal",
       "category": "Physical Modelling",
       "date": "January 2024",
       "readTime": "5 min read",
@@ -157,7 +227,6 @@
     },
     {
       "icon": "fa-recycle",
-      "color": "copper",
       "category": "Circular Metallurgy",
       "date": "November 2023",
       "readTime": "6 min read",
