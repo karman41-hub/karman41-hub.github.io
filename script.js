@@ -217,31 +217,34 @@ function observeNew(container) {
 }
 
 
-/* ── 1. CURSOR SPOTLIGHT ────────────────────────────────────── */
-(function initSpotlight() {
-  const spotlight = document.querySelector('.spotlight');
-  if (!spotlight) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  if (window.matchMedia('(hover: none)').matches) return; /* skip on touch devices */
+/* ── 1. DARK / LIGHT MODE TOGGLE ────────────────────────────── */
+(function initThemeToggle() {
+  const btn  = document.getElementById('themeToggle');
+  const icon = document.getElementById('themeIcon');
+  if (!btn) return;
 
-  let suppressed = false;
+  /* Apply saved or system preference on load */
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDark = saved ? saved === 'dark' : prefersDark;
+  if (isDark) applyDark();
 
-  /* Suppress spotlight over interactive charts / media */
-  document.querySelectorAll('.pub-bubble-wrap, .slideshow-container').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      suppressed = true;
-      spotlight.style.background = 'none';
-    }, { passive: true });
-    el.addEventListener('mouseleave', () => {
-      suppressed = false;
-    }, { passive: true });
+  btn.addEventListener('click', () => {
+    const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+    dark ? applyLight() : applyDark();
   });
 
-  document.addEventListener('mousemove', e => {
-    if (suppressed) return;
-    spotlight.style.background =
-      `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(192,57,43,0.16), transparent 40%)`;
-  }, { passive: true });
+  function applyDark() {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    icon.className = 'fas fa-sun';
+    localStorage.setItem('theme', 'dark');
+  }
+
+  function applyLight() {
+    document.documentElement.removeAttribute('data-theme');
+    icon.className = 'fas fa-moon';
+    localStorage.setItem('theme', 'light');
+  }
 })();
 
 

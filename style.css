@@ -52,13 +52,19 @@ ul { list-style: none; }
 
 ::selection { background: var(--green-tint); color: var(--green); }
 
-/* ── 3. CURSOR SPOTLIGHT ────────────────────────────────────── */
-.spotlight {
-  pointer-events: none;
-  position: fixed;
-  inset: 0;
-  z-index: 30;
-  transition: background 0.1s;
+/* ── 3. DARK MODE VARIABLES ─────────────────────────────────── */
+[data-theme="dark"] {
+  --navy:            #0f0f0f;
+  --light-navy:      #1a1a1a;
+  --lightest-navy:   #2a2a2a;
+  --navy-shadow:     rgba(0, 0, 0, 0.4);
+  --slate:           #9a9a9a;
+  --light-slate:     #cccccc;
+  --lightest-slate:  #f0f0f0;
+  --white:           #f0f0f0;
+  --green:           #e05252;
+  --green-tint:      rgba(224, 82, 82, 0.12);
+  --green-glow:      rgba(224, 82, 82, 0.06);
 }
 
 /* ── 4. LAYOUT ──────────────────────────────────────────────── */
@@ -224,6 +230,30 @@ ul { list-style: none; }
 }
 
 .orcid-svg { width: 14px; height: 14px; fill: currentColor; }
+
+/* Theme toggle */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 6px;
+  border: 1px solid var(--lightest-navy);
+  background: transparent;
+  color: var(--slate);
+  font-size: 0.9rem;
+  transition: color var(--dur) var(--ease),
+              border-color var(--dur) var(--ease),
+              background var(--dur) var(--ease),
+              transform var(--dur) var(--ease);
+  cursor: pointer !important;
+}
+.theme-toggle:hover {
+  color: var(--green);
+  border-color: var(--green);
+  background: var(--green-tint);
+  transform: rotate(20deg);
+}
 
 /* Hamburger — hidden on desktop */
 .hamburger {
@@ -1200,7 +1230,7 @@ input, textarea, select {
     height: auto;
     padding: 0 1.5rem;
     z-index: 100;
-    background: rgba(253, 245, 245, 0.97);
+    background: var(--light-navy);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--lightest-navy);
@@ -1239,7 +1269,7 @@ input, textarea, select {
     position: fixed;
     top: 72px;
     left: 0; right: 0;
-    background: rgba(253, 245, 245, 0.99);
+    background: var(--light-navy);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--lightest-navy);
