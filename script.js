@@ -236,13 +236,13 @@ function observeNew(container) {
 
   function applyDark() {
     document.documentElement.setAttribute('data-theme', 'dark');
-    icon.textContent = '☀';
+    btn.classList.add('dark-active');
     localStorage.setItem('theme', 'dark');
   }
 
   function applyLight() {
     document.documentElement.removeAttribute('data-theme');
-    icon.textContent = '🌙';
+    btn.classList.remove('dark-active');
     localStorage.setItem('theme', 'light');
   }
 })();
