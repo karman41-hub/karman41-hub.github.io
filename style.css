@@ -1407,6 +1407,19 @@ input, textarea, select {
     max-width: 280px;
   }
 
+  /* Map label legibility on mobile — remove white halo, keep fills dark */
+  .map-lbl-city,
+  .map-lbl-region,
+  .map-lbl-sm,
+  .map-lbl-xs {
+    stroke: none;
+    paint-order: fill;
+  }
+  .map-lbl-city   { fill: #111; }
+  .map-lbl-region { fill: #222; }
+  .map-lbl-sm     { fill: #222; }
+  .map-lbl-xs     { fill: #1a6e52; }
+
   .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
   .form-row { grid-template-columns: 1fr; }
 
