@@ -1341,44 +1341,71 @@ input, textarea, select {
   .bc-hint      { font-size: 0.75rem; }
   .pub-stats    { font-size: 0.75rem; gap: 0.5rem; }
 
-  /* About: photo row on top, then text, then map info strip */
+  /* About: text full width, then location card below */
   .about-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  /* Show photo on mobile — smaller and centred */
+  /* Hide photo on mobile — replaced by full location card */
   .about-photo-col {
-    display: flex;
-    justify-content: center;
-  }
-  .about-photo {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
+    display: none;
   }
 
-  /* Show map column on mobile as a compact info strip (no SVG) */
+  /* Show map column on mobile as a standalone location card */
   .about-map-col {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 0.75rem 1rem;
+    gap: 0.9rem;
+    padding: 1.25rem 1rem 1.5rem;
     background: var(--light-navy);
     border: 1px solid var(--lightest-navy);
-    border-radius: 8px;
+    border-radius: 10px;
+    position: relative;
   }
-  /* Hide the SVG map itself — keep only the text info */
-  .about-map-col .sweden-map-link { display: none; }
+  /* "Location" label at the top of the card */
+  .about-map-col::before {
+    content: '📍 Location';
+    font-size: 0.65rem;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--slate);
+    align-self: flex-start;
+  }
+
+  /* Show the SVG map on mobile */
+  .about-map-col .sweden-map-link {
+    display: block;
+    max-width: 140px;
+    width: 100%;
+  }
+
+  /* Location info — centred under the map */
   .map-location-info {
-    flex: 1;
-    gap: 0.35rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+    text-align: center;
   }
-  .map-location-info .location-coords { font-size: 0.82rem; }
-  .map-location-info .location-tz     { font-size: 0.78rem; }
-  .map-location-info .location-meta   { gap: 0.5rem; }
-  .map-location-desc { font-size: 0.75rem; }
+  .map-location-info .location-coords { font-size: 0.85rem; }
+  .map-location-info .location-tz {
+    font-size: 0.8rem;
+    justify-content: center;
+  }
+  .map-location-info .location-meta {
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  .map-location-desc {
+    font-size: 0.78rem;
+    text-align: center;
+    max-width: 280px;
+  }
 
   .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
   .form-row { grid-template-columns: 1fr; }
