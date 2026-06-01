@@ -236,13 +236,13 @@ function observeNew(container) {
 
   function applyDark() {
     document.documentElement.setAttribute('data-theme', 'dark');
-    icon.className = 'fas fa-sun';
+    icon.textContent = '☀';
     localStorage.setItem('theme', 'dark');
   }
 
   function applyLight() {
     document.documentElement.removeAttribute('data-theme');
-    icon.className = 'fas fa-moon';
+    icon.textContent = '🌙';
     localStorage.setItem('theme', 'light');
   }
 })();
