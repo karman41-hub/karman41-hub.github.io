@@ -5,7 +5,7 @@
       "label": "Years Research & Industrial Experience"
     },
     {
-      "num": "13",
+      "num": "14",
       "label": "Publications & Conference Contributions"
     },
     {
@@ -19,6 +19,16 @@
     "i10Index": "3"
   },
   "publications": [
+    {
+      "year": "2026",
+      "type": "Journal",
+      "title": "Lignin as Binder and Renewable Carbon Source in Self-Reducing Briquettes Containing Mill Scale and Pellet Fines",
+      "authors": "<strong>K. Manu</strong>, E. Mousa, D. Rusanova-Naydenova, M. Elmer",
+      "venue": "<em>Journal of Sustainable Metallurgy</em>, Springer, 2026",
+      "doi": "https://doi.org/10.1007/s40831-026-01565-1",
+      "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en",
+      "citedBy": 0
+    },
     {
       "year": "2026",
       "type": "Conference",
