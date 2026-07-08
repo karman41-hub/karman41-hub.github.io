@@ -293,33 +293,4 @@
       "src": "assets/slides/slide-2.jpg"
     }
   ],
-  "blog": [
-    {
-      "icon": "fa-brain",
-      "category": "Digitalisation",
-      "date": "March 2024",
-      "readTime": "7 min read",
-      "title": "Why Physics-Informed ML Will Outperform Black-Box Models in Steelmaking",
-      "excerpt": "Pure data-driven models struggle with the sparse, noisy, high-variance data environment of the steel plant. Here's the case for keeping the physics in the loop.",
-      "link": "#"
-    },
-    {
-      "icon": "fa-water",
-      "category": "Physical Modelling",
-      "date": "January 2024",
-      "readTime": "5 min read",
-      "title": "The Underestimated Power of Water Models in the Age of CFD",
-      "excerpt": "When simulation budgets explode and validation data is scarce, a well-designed water model can still outperform a poorly validated numerical model. A defence of experimental analogue methods.",
-      "link": "#"
-    },
-    {
-      "icon": "fa-recycle",
-      "category": "Circular Metallurgy",
-      "date": "November 2023",
-      "readTime": "6 min read",
-      "title": "Steel Recycling at Scale: The Tramp Element Problem No One Talks About",
-      "excerpt": "As scrap ratios increase globally, copper contamination becomes a fundamental barrier to quality steel production. What are our real options at the process level?",
-      "link": "#"
-    }
-  ]
 }
