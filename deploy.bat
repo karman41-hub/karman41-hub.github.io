@@ -26,10 +26,16 @@ git add live_ppt.pptx index.html style.css script.js data.json
 :: ── Check if there is anything staged ────────────────────
 git diff --staged --quiet
 if %ERRORLEVEL% == 0 (
-    echo  [i] Nothing changed — website is already up to date.
+    echo  [i] No file changes - checking for commits not yet on GitHub...
+    git push origin main
     echo.
     goto :done
 )
+
+:: -- Cache-bust index.html asset refs so browsers pick up new CSS/JS --
+for /f %%v in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmm"') do set "VER=%%v"
+powershell -NoProfile -Command "(Get-Content 'index.html' -Raw) -replace '(style\.css|script\.js)\?v=[0-9]+', '$1?v=%VER%' | Set-Content 'index.html' -NoNewline"
+git add index.html
 
 :: ── Build commit message ──────────────────────────────────
 if "%~1"=="" (

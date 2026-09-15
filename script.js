@@ -12,7 +12,8 @@ let _revealObserver = null;
 (async function loadData() {
   let d;
   try {
-    const res = await fetch('data.json');
+    /* no-cache: always revalidate with the server so a fresh deploy shows immediately */
+    const res = await fetch('data.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     d = await res.json();
   } catch (e) {
