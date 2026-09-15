@@ -463,11 +463,17 @@ function renderBubbleChart(publications) {
   const minYr  = 2020;   /* fixed – x-axis always starts at 2020 */
   const maxYr  = Math.max(...allYrs);
   const ySpan  = maxYr === minYr ? 1 : maxYr - minYr;
-  const YCEILING = 100;   /* y-axis top label */
+  /* y-axis top label – scales with the data so the most-cited paper is never clipped */
+  const maxCit   = Math.max(0, ...pubs.map(p => p.citedBy || 0));
+  const HEAD     = Math.max(maxCit * 1.05, 40);          /* 5% headroom, sane floor */
+  const STEP     = [5, 10, 20, 25, 50, 100, 200, 500]
+                     .find(s => Math.ceil(HEAD / s) <= 5) || 1000;
+  const YCEILING = Math.ceil(HEAD / STEP) * STEP;
+  const TICKS    = Array.from({ length: YCEILING / STEP + 1 }, (_, i) => i * STEP);
 
   const xOf = yr  => ML + ((yr - minYr) / ySpan) * CW;
   const yOf = cit => MT + CH - Math.min(cit, YCEILING) / YCEILING * CH;
-  const rOf = cit => 7 + Math.sqrt(cit || 0) * 3.9;
+  const rOf = cit => 7 + Math.sqrt(cit || 0) * (maxCit > 120 ? 3.2 : 3.9);
 
   /* ── Colors ────────────────────────────────────────────────── */
   const C = {
@@ -497,7 +503,7 @@ function renderBubbleChart(publications) {
     class="pub-bubble-svg" role="img" aria-label="Citation bubble timeline">`;
 
   /* grid + y-axis */
-  [0, 25, 50, 75, 100].forEach(v => {
+  TICKS.forEach(v => {
     const gy = yOf(v);
     svg += `<line x1="${ML}" y1="${gy}" x2="${W - MR}" y2="${gy}"
       stroke="${v === 0 ? '#ccc' : '#ecdede'}" stroke-width="${v === 0 ? 1.5 : 1}"

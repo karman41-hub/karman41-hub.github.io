@@ -5,17 +5,17 @@
       "label": "Years Research & Industrial Experience"
     },
     {
-      "num": "14",
+      "num": "13",
       "label": "Publications & Conference Contributions"
     },
     {
-      "num": "178",
+      "num": "186",
       "label": "Total Citations (Google Scholar)"
     }
   ],
   "citations": {
-    "total": "178",
-    "hIndex": "5",
+    "total": "186",
+    "hIndex": "6",
     "i10Index": "3"
   },
   "publications": [
@@ -64,7 +64,7 @@
       "venue": "<em>International Journal on Interactive Design and Manufacturing (IJIDeM)</em>, vol. 18, 2024",
       "doi": "https://doi.org/10.1007/s12008-024-01946-4",
       "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en",
-      "citedBy": 4
+      "citedBy": 6
     },
     {
       "year": "2023",
@@ -74,7 +74,7 @@
       "venue": "<em>Materials</em>, vol. 16, no. 10, p. 3888, MDPI, 2023",
       "doi": "https://doi.org/10.3390/ma16103888",
       "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en",
-      "citedBy": 13
+      "citedBy": 16
     },
     {
       "year": "2023",
@@ -112,7 +112,7 @@
       "venue": "<em>Metals and Materials International</em>, Springer, 2021",
       "doi": "https://doi.org/10.1007/s12540-020-00899-z",
       "scholar": "https://scholar.google.com/citations?user=c4v05hUAAAAJ&hl=en",
-      "citedBy": 101
+      "citedBy": 104
     },
     {
       "year": "2021",
@@ -158,7 +158,7 @@
         },
         {
           "icon": "fa-quote-right",
-          "text": "11 citations and growing"
+          "text": "16 citations and growing"
         }
       ],
       "tech": [
@@ -247,11 +247,11 @@
       "outcomes": [
         {
           "icon": "fa-quote-right",
-          "text": "93 citations — <em>Metals &amp; Materials International</em>, Springer 2021"
+          "text": "104 citations — <em>Metals &amp; Materials International</em>, Springer 2021"
         },
         {
           "icon": "fa-quote-right",
-          "text": "41 citations — <em>Materials</em>, MDPI 2021"
+          "text": "45 citations — <em>Materials</em>, MDPI 2021"
         }
       ],
       "tech": [
@@ -274,7 +274,7 @@
         },
         {
           "icon": "fa-award",
-          "text": "14 combined citations"
+          "text": "15 combined citations"
         }
       ],
       "tech": [
@@ -292,5 +292,13 @@
     {
       "src": "assets/slides/slide-2.jpg"
     }
-  ]
+  ],
+  "citationsPerYear": {
+    "2021": 4,
+    "2022": 24,
+    "2023": 32,
+    "2024": 31,
+    "2025": 52,
+    "2026": 42
+  }
 }
